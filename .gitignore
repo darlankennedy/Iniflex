@@ -1,0 +1,27 @@
+# Maven / Java
+target/
+*.class
+*.log
+*.tmp
+
+# IDEs
+*.iml
+.idea/
+.project
+.classpath
+.settings/
+bin/
+
+# Maven wrapper jar (opcional ignorar)
+.mvn/wrapper/maven-wrapper.jar
+
+# SO
+.DS_Store
+Thumbs.db
+
+# Banco local
+data/*.db
+data/*.sqlite
+
+# Outros
+*.zip
