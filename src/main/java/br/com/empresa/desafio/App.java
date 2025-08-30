@@ -1,5 +1,6 @@
 package br.com.empresa.desafio;
 
+import br.com.empresa.desafio.controller.ConsoleMenu;
 import br.com.empresa.desafio.controller.FuncionarioController;
 import br.com.empresa.desafio.repository.FuncionarioRepository;
 import br.com.empresa.desafio.repository.InMemoryFuncionarioRepository;
@@ -21,7 +22,9 @@ public class App {
 
         FuncionarioService service = new FuncionarioService(repo);
         FuncionarioController controller = new FuncionarioController(service);
+        ConsoleMenu menu = new ConsoleMenu(service);
         controller.runAll();
+        menu.start();
     }
 
     private static void ensureParentDir(String path) {

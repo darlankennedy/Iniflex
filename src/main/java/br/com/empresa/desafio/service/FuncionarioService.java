@@ -144,5 +144,17 @@ public class FuncionarioService {
         }
         return sb.toString();
     }
-    
+
+    public String getRepositorioDescricao() {
+        return repository.getClass().getSimpleName();
+    }
+
+
+    public void removerPorNome(String nome) {
+        repository.deleteByNome(nome);
+    }
+
+    public void adicionarFuncionario(Funcionario f) {
+        repository.save(f);
+    }
 }
